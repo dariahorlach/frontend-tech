@@ -60,3 +60,44 @@ document.getElementById("checkBtn").addEventListener("click", function () {
     alert("Є помилки у формі! Невірно заповнені поля виділено червоним.");
   }
 });
+
+const variantCellNumber = 1;
+
+const table = document.getElementById("table");
+let number = 1;
+
+for (let row = 0; row < 6; row++) {
+  const tr = document.createElement("tr");
+
+  for (let col = 0; col < 6; col++) {
+    const td = document.createElement("td");
+    td.textContent = number;
+
+    if (number === variantCellNumber) {
+      td.addEventListener("mouseover", () => {
+        td.style.backgroundColor = getRandomColor();
+      });
+
+      td.addEventListener("click", () => {
+        const chosenColor = document.getElementById("colorPicker").value;
+        td.style.backgroundColor = chosenColor;
+      });
+
+      td.addEventListener("dblclick", () => {
+        const chosenColor = document.getElementById("colorPicker").value;
+        const rowCells = td.parentNode.children;
+        for (let cell of rowCells) {
+          cell.style.backgroundColor = chosenColor;
+        }
+      });
+    }
+
+    tr.appendChild(td);
+    number++;
+  }
+  table.appendChild(tr);
+}
+
+function getRandomColor() {
+  return "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
