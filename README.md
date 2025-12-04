@@ -9,4 +9,4 @@
 - [LR5](https://dariahorlach.github.io/frontend-tech/5/)
 - [LR6](https://dariahorlach.github.io/frontend-tech/6/)
 - [LR7](https://frontend-tech-psi.vercel.app/)
-- [LR8]()
+- [LR8](https://dariahorlach.github.io/frontend-tech/8/)
