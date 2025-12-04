@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="keywords"
+      content="Горлач Дар'я, ІА-31, HTML5, Лабораторна робота 2"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Горлач Дар'я Дмитрівна | ІА-31 | Лабораторна 2 | Варіант 1</title>
+  </head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      border: 2px solid #333;
+      height: 80px;
+    }
+
+    tr:first-child td {
+      background-color: #118f8f;
+      color: #ffffff;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    tr:first-child td:nth-child(odd) {
+      background-color: #118f8f;
+    }
+
+    tr:first-child td:nth-child(even) {
+      background-color: #f5f511;
+      color: #000000;
+    }
+
+    tr:first-child:hover td:nth-child(odd) {
+      background-color: #f5f511;
+      color: #000;
+    }
+
+    tr:first-child:hover td:nth-child(even) {
+      background-color: #118f8f;
+      color: #fff;
+    }
+
+    tr:nth-child(2) td {
+      background-color: #ddd;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    tr:nth-child(2):hover td {
+      background-color: #333;
+      color: white;
+    }
+
+    td {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <h2>Var 1</h2>
+
+    <table>
+      <tr>
+        <td rowspan="2" colspan="2">Дмитрівна</td>
+        <td colspan="1" rowspan="1">Дар‘я</td>
+        <td rowspan="2">Горлач</td>
+        <td rowspan="2">Горлач</td>
+      </tr>
+
+      <tr>
+        <td colspan="1" rowspan="1">ІА-31</td>
+      </tr>
+
+      <tr>
+        <td class="cell-2">2</td>
+        <td rowspan="2">ЛР2</td>
+        <td rowspan="2">1</td>
+        <td rowspan="2" colspan="2">1</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+      </tr>
+    </table>
+
+    <div class="wrap">
+      <section class="block">
+        <h2>Variant 1 — position</h2>
+        <div class="traffic traffic-position" aria-hidden="true">
+          <div class="lamp red" id="pos-red"></div>
+          <div class="lamp yellow" id="pos-yellow"></div>
+          <div class="lamp green" id="pos-green"></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Variant 2 — transform</h2>
+        <div class="traffic traffic-transform" aria-hidden="true">
+          <div class="lamp transform-red"></div>
+          <div class="lamp transform-yellow"></div>
+          <div class="lamp transform-green"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
